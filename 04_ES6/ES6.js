@@ -1,7 +1,7 @@
 "use strict";
 // let & const
 console.log('LET & CONST');
-let seraQuePode = '?'; // hoisting | var & let sofrem hoisting
+let seraQuePode = '?'; // hoisting | var & let não sofrem hoisting
 const estaFrio = true;
 if (estaFrio) {
     var acao = 'Colocar o casaco!';
@@ -9,12 +9,12 @@ if (estaFrio) {
     console.log(acao);
     console.log(b);
 }
-// console.log(acao); // var não respeita escopo de bloco
-// console.log(b); // let respeita escopo de bloco
+// console.log(acao); // var não respeita escopo de bloco // 'acao' está definido
+// console.log(b); // let respeita escopo de bloco // Erro: 'b' não está definido
 const cpf = '123.456.789-00';
 // cpf = '987.654.321-99'; // const não permite reatribuição
 /* -------------------------------------------------------------------------- */
-//
+// Escopo
 var segredo = 'externo!';
 function revelar() {
     var segredo = 'interno';
